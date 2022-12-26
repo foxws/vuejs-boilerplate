@@ -20,8 +20,6 @@
         </ul>
       </nav>
 
-      <div class="divider mx-4"></div>
-
       <nav class="px-4 text-lg text-gray-400">
         <ul class="flex flex-nowrap space-x-6">
           <li>
