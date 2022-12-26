@@ -6,16 +6,30 @@
       </router-link>
 
       <nav class="px-4 text-lg text-gray-400">
-        <ul class="flex flex-nowrap space-x-6 sm:space-x-8">
+        <ul class="flex flex-nowrap space-x-6">
           <li v-for="(item, index) in items" :key="index">
             <router-link
               :to="item.route"
               class="flex flex-nowrap items-center space-x-2"
               active-class="!text-white"
             >
-              <span :class="item.icon" class="text-2xl sm:text-xl"></span>
+              <span :class="item.icon" class="text-2xl sm:hidden"></span>
               <span class="hidden sm:inline">{{ item.title }}</span>
             </router-link>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="divider mx-4"></div>
+
+      <nav class="px-4 text-lg text-gray-400">
+        <ul class="flex flex-nowrap space-x-6">
+          <li>
+            <span class="text-2xl mdi mdi-magnify"></span>
+          </li>
+
+          <li>
+            <span class="text-2xl mdi mdi-account-circle"></span>
           </li>
         </ul>
       </nav>
@@ -28,8 +42,8 @@ import { computed } from "vue";
 
 const items = computed(() => [
   {
-    title: "Library",
-    icon: "mdi mdi-play-circle",
+    title: "Home",
+    icon: "mdi mdi-home",
     route: { name: "home" },
   },
   {
@@ -38,8 +52,8 @@ const items = computed(() => [
     route: { name: "about" },
   },
   {
-    title: "Account",
-    icon: "mdi mdi-account-circle",
+    title: "Library",
+    icon: "mdi mdi-play-circle",
     route: { name: "about" },
   },
 ]);

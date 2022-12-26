@@ -3,6 +3,7 @@
 
 /* Styles */
 @import "styles/general.css";
+@import "styles/divider.css";
 
 /* Tailwind */
 @tailwind base;
@@ -10,8 +11,8 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --color-primary: 37 32 80;
-        --color-secondary: 193 106 89;
-    }
+  :root {
+    --color-primary: 37 32 80;
+    --color-secondary: 193 106 89;
+  }
 }

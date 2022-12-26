@@ -1,9 +1,9 @@
 html,
 body {
-    @apply bg-primary bg-fixed bg-gradient-to-br from-primary to-secondary;
+  @apply bg-primary bg-fixed bg-gradient-to-br from-primary to-secondary;
 }
 
 body::before {
-    content: '';
-    @apply block fixed bg-black/40 inset-0;
+  content: "";
+  @apply block fixed bg-black/40 inset-0;
 }
