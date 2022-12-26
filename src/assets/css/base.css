@@ -1,0 +1,17 @@
+/* Icons */
+@import "@mdi/font";
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --theme-color: #52b3d0;
+    }
+}
+
+@layer components {
+    @import "styles/general.css";
+}
