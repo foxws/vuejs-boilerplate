@@ -20,6 +20,8 @@
         </ul>
       </nav>
 
+      <div class="divider sm:hidden"></div>
+
       <nav class="px-4 text-lg text-gray-400">
         <ul class="flex flex-nowrap space-x-6">
           <li>
