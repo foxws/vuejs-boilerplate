@@ -1,28 +1,24 @@
 <template>
   <header class="sticky top-0 z-40 w-full">
-    <div class="relative h-14 bg-black flex items-center justify-between">
-      <router-link to="/" class="px-4">
+    <div class="relative h-14 bg-black flex items-center">
+      <router-link to="/" class="px-4 flex-1">
         <img alt="MiniTube" class="h-4 w-auto" src="@/assets/logo.png" />
       </router-link>
 
-      <nav class="text-lg text-gray-300">
-        <ul class="flex flex-nowrap space-x-8 xs:space-x-4">
+      <nav class="px-4 text-lg text-gray-400">
+        <ul class="flex flex-nowrap space-x-6 sm:space-x-8">
           <li v-for="(item, index) in items" :key="index">
             <router-link
               :to="item.route"
-              class="flex flex-nowrap items-center space-x-1"
+              class="flex flex-nowrap items-center space-x-2"
               active-class="!text-white"
             >
-              <span :class="item.icon" class="sm:hidden text-3xl"></span>
+              <span :class="item.icon" class="text-2xl sm:text-xl"></span>
               <span class="hidden sm:inline">{{ item.title }}</span>
             </router-link>
           </li>
         </ul>
       </nav>
-
-      <router-link to="/" class="px-4">
-        <img alt="MiniTube" class="h-4 w-auto" src="@/assets/logo.png" />
-      </router-link>
     </div>
   </header>
 </template>
@@ -31,8 +27,20 @@
 import { computed } from "vue";
 
 const items = computed(() => [
-  { title: "Library", icon: "mdi mdi-play", route: { name: "home" } },
-  { title: "Explore", icon: "mdi mdi-play", route: { name: "home" } },
-  { title: "Account", icon: "mdi mdi-play", route: { name: "home" } },
+  {
+    title: "Library",
+    icon: "mdi mdi-play-circle",
+    route: { name: "home" },
+  },
+  {
+    title: "Explore",
+    icon: "mdi mdi-compass",
+    route: { name: "about" },
+  },
+  {
+    title: "Account",
+    icon: "mdi mdi-account-circle",
+    route: { name: "about" },
+  },
 ]);
 </script>
