@@ -1,6 +1,9 @@
 /* Icons */
 @import "@mdi/font";
 
+/* Styles */
+@import "styles/general.css";
+
 /* Tailwind */
 @tailwind base;
 @tailwind components;
@@ -8,10 +11,7 @@
 
 @layer base {
     :root {
-        --theme-color: #52b3d0;
+        --color-primary: 37 32 80;
+        --color-secondary: 193 106 89;
     }
-}
-
-@layer components {
-    @import "styles/general.css";
 }
