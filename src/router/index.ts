@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import AppLayout from "@/layouts/AppLayout.vue";
 import { useApi } from "@/composables/api";
+import AppLayout from "@/layouts/AppLayout.vue";
+import AuthLayout from "@/layouts/AuthLayout.vue";
 
 const { api } = useApi();
 
@@ -23,6 +24,15 @@ const router = createRouter({
       meta: {
         layout: AppLayout,
         middleware: "auth",
+      },
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/LoginView.vue"),
+      meta: {
+        layout: AuthLayout,
+        middleware: "guest",
       },
     },
   ],
