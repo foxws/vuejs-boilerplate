@@ -1,11 +1,11 @@
 <template>
   <header class="sticky top-0 z-40 w-full">
-    <div class="relative h-14 bg-black flex items-center">
+    <div class="relative h-14 text-lg bg-black text-gray-400 flex items-center">
       <router-link to="/" class="px-4 flex-1">
         <img alt="MiniTube" class="h-4 w-auto" src="@/assets/logo.png" />
       </router-link>
 
-      <nav class="px-4 text-lg text-gray-400">
+      <nav class="px-4">
         <ul class="flex flex-nowrap space-x-6">
           <li v-for="(item, index) in items" :key="index">
             <router-link
@@ -22,7 +22,7 @@
 
       <div class="divider sm:hidden"></div>
 
-      <nav class="px-4 text-lg text-gray-400">
+      <nav class="px-4">
         <ul class="flex flex-nowrap space-x-6">
           <li>
             <span class="text-2xl mdi mdi-magnify"></span>
