@@ -3,6 +3,7 @@
 
 /* Styles */
 @import "styles/general.css";
+@import "styles/card.css";
 @import "styles/divider.css";
 
 /* Tailwind */

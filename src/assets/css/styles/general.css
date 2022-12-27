@@ -1,9 +1,9 @@
 html,
 body {
-  @apply bg-primary bg-fixed bg-gradient-to-br from-primary to-secondary;
+  @apply relative;
 }
 
-body::before {
+body::after {
   content: "";
-  @apply block fixed bg-black/40 inset-0;
+  @apply block absolute bg-primary bg-fixed bg-gradient-to-br from-primary/60 to-secondary/60 inset-0 -z-10;
 }

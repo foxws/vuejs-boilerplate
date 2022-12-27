@@ -1,9 +1,7 @@
 <template>
   <app-navigation />
 
-  <div class="relative">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script setup lang="ts">
