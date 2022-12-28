@@ -27,12 +27,39 @@ const router = createRouter({
       },
     },
     {
+      path: "/search",
+      name: "search",
+      component: () => import("../views/SearchView.vue"),
+      meta: {
+        layout: AppLayout,
+        middleware: "auth",
+      },
+    },
+    {
+      path: "/account",
+      name: "account",
+      component: () => import("../views/AccountView.vue"),
+      meta: {
+        layout: AppLayout,
+        middleware: "auth",
+      },
+    },
+    {
       path: "/login",
       name: "login",
       component: () => import("../views/LoginView.vue"),
       meta: {
         layout: AuthLayout,
         middleware: "guest",
+      },
+    },
+    {
+      path: "/logout",
+      name: "logout",
+      component: () => import("../views/LogoutView.vue"),
+      meta: {
+        layout: AuthLayout,
+        middleware: "auth",
       },
     },
   ],

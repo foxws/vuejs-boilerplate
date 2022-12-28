@@ -1,6 +1,6 @@
 <template>
-  <header class="sticky top-0 z-40 w-full">
-    <div class="relative h-14 text-lg bg-black text-gray-400 flex items-center">
+  <header class="sticky top-0 z-10 w-full">
+    <div class="navbar bg-black text-gray-400">
       <router-link to="/" class="px-4 flex-1">
         <img alt="MiniTube" class="h-4 w-auto" src="@/assets/logo.png" />
       </router-link>
@@ -13,7 +13,12 @@
               class="flex flex-nowrap items-center space-x-2"
               active-class="!text-white"
             >
-              <span :class="item.icon" class="text-2xl sm:hidden"></span>
+              <div
+                class="sm:hidden tooltip tooltip-bottom"
+                :data-tip="item.title"
+              >
+                <span :class="item.icon" class="text-2xl"></span>
+              </div>
               <span class="hidden sm:inline">{{ item.title }}</span>
             </router-link>
           </li>
@@ -25,11 +30,25 @@
       <nav class="px-4">
         <ul class="flex flex-nowrap space-x-6">
           <li>
-            <span class="text-2xl mdi mdi-magnify"></span>
+            <router-link
+              :to="{ name: 'search' }"
+              data-tip="Search"
+              class="tooltip tooltip-bottom"
+              active-class="!text-white"
+            >
+              <span class="text-2xl mdi mdi-magnify"></span>
+            </router-link>
           </li>
 
           <li>
-            <span class="text-2xl mdi mdi-account-circle"></span>
+            <router-link
+              :to="{ name: 'account' }"
+              data-tip="Account"
+              class="tooltip tooltip-bottom"
+              active-class="!text-white"
+            >
+              <span class="text-2xl mdi mdi-account-circle"></span>
+            </router-link>
           </li>
         </ul>
       </nav>
