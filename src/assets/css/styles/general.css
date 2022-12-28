@@ -1,9 +1,8 @@
 html,
 body {
-  @apply relative antialiased;
+  @apply relative antialiased min-h-screen;
 }
 
 body::after {
-  content: "";
-  @apply block absolute bg-primary bg-fixed bg-gradient-to-br from-primary/60 to-secondary/60 inset-0 -z-10;
+  @apply content-[""] block absolute bg-primary bg-fixed bg-gradient-to-br from-primary/60 to-secondary/60 inset-0 -z-10;
 }
