@@ -25,7 +25,9 @@
         </ul>
       </nav>
 
-      <div class="divider sm:hidden"></div>
+      <div
+        class="divider divider-horizontal before:bg-white/10 after:bg-white/10 mx-1 py-2 sm:hidden"
+      ></div>
 
       <nav class="px-4">
         <ul class="flex flex-nowrap space-x-6">
