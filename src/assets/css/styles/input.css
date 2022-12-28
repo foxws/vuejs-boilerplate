@@ -1,8 +1,8 @@
 .input {
-  @apply font-medium text-sm leading-loose;
+  @apply font-medium text-sm rounded-sm;
 
   &-md {
-    @apply h-10 text-sm leading-loose;
+    @apply h-10 text-sm;
   }
 
   &:focus {
@@ -12,7 +12,7 @@
 
 .input-group {
   &-md {
-    @apply h-10 text-sm leading-loose;
+    @apply h-10 text-sm;
   }
 }
 

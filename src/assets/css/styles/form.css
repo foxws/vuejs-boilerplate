@@ -1,9 +1,9 @@
 .label {
-    &-text {
-        @apply text-sm text-base-content font-medium;
-    }
+  &-text {
+    @apply text-sm text-base-content font-medium;
+  }
 
-    &-text-alt {
-        @apply text-xs text-base-content font-medium;
-    }
+  &-text-alt {
+    @apply text-xs text-base-content font-medium;
+  }
 }

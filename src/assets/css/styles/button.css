@@ -1,7 +1,7 @@
 .btn {
-    @apply text-sm leading-none;
+  @apply text-sm leading-none rounded-sm;
 }
 
 .btn-md {
-    @apply h-9 min-h-6;
+  @apply h-9 min-h-6;
 }
