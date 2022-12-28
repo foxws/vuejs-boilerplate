@@ -1,0 +1,3 @@
+.alert {
+    @apply rounded-sm text-sm;
+}

@@ -16,6 +16,7 @@
     "@types/qs": "^6.9.7",
     "@vueuse/core": "^9.9.0",
     "@vueuse/math": "^9.9.0",
+    "daisyui": "^2.46.0",
     "qs": "^6.11.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

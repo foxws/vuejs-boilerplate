@@ -1,0 +1,25 @@
+.input {
+  @apply font-medium text-sm leading-loose;
+
+  &-md {
+    @apply h-10 text-sm leading-loose;
+  }
+
+  &:focus {
+    @apply outline-0 outline-offset-0;
+  }
+}
+
+.input-group {
+  &-md {
+    @apply h-10 text-sm leading-loose;
+  }
+}
+
+.input-group :first-child {
+  @apply !rounded-tl-lg !rounded-bl-lg;
+}
+
+.input-group :last-child {
+  @apply !rounded-tr-lg !rounded-br-lg;
+}

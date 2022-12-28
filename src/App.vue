@@ -10,3 +10,8 @@ const { currentRoute } = useRouter();
 
 const layout = computed(() => currentRoute.value.meta?.layout);
 </script>
+
+<style>
+@import "@/assets/css/base.css";
+@import "@/assets/css/styles.css";
+</style>

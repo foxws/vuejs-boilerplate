@@ -1,0 +1,26 @@
+.separator {
+    span {
+        @apply relative ml-1 px-1;
+    }
+
+    span:after {
+        @apply absolute -left-1;
+        content: "|";
+    }
+
+    &.bullet > span:after {
+        content: "•";
+    }
+
+    span:first-child {
+        @apply ml-0 pl-0;
+    }
+
+    span:last-child {
+        @apply mr-0 pr-0;
+    }
+
+    span:first-child:after {
+        content: "";
+    }
+}

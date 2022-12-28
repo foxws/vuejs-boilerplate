@@ -1,19 +1,7 @@
 /* Icons */
 @import "@mdi/font";
 
-/* Styles */
-@import "styles/general.css";
-@import "styles/card.css";
-@import "styles/divider.css";
-
 /* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  :root {
-    --color-primary: 37 32 80;
-    --color-secondary: 193 106 89;
-  }
-}

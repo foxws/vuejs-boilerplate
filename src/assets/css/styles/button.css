@@ -1,0 +1,7 @@
+.btn {
+    @apply text-sm leading-none;
+}
+
+.btn-md {
+    @apply h-9 min-h-6;
+}
