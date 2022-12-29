@@ -19,7 +19,7 @@
               >
                 <span :class="item.icon" class="text-2xl"></span>
               </div>
-              <span class="hidden sm:inline">{{ item.title }}</span>
+              <span class="hidden font-medium sm:inline">{{ item.title }}</span>
             </router-link>
           </li>
         </ul>
