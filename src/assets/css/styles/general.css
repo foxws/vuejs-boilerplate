@@ -4,5 +4,5 @@ body {
 }
 
 body::after {
-  @apply content-[""] block absolute bg-primary bg-fixed bg-gradient-to-br from-primary/60 to-secondary/60 inset-0 -z-10;
+  @apply content-[""] block absolute bg-primary bg-fixed bg-gradient-to-br from-primary/50 to-secondary/50 inset-0 -z-10;
 }

@@ -17,6 +17,7 @@ module.exports = {
           "base-200": "#f2f2f2",
           "base-300": "#e5e6e6",
           "base-content": "#1f2937",
+          fontFamily: "InterVariable, ui-sans-serif, system-ui, -apple-system",
         },
       },
     ],
