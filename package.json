@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.14",
+    "@fontsource/montserrat": "^4.5.13",
     "@mdi/font": "^7.1.96",
+    "@tailwindcss/typography": "^0.5.8",
     "@types/qs": "^6.9.7",
     "@vueuse/core": "^9.9.0",
     "@vueuse/math": "^9.9.0",
