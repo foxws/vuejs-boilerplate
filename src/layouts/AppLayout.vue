@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
 
-const AppNavigation = defineAsyncComponent({
-  loader: () => import("@/components/AppNavigation.vue"),
-});
+const AppNavigation = defineAsyncComponent(
+  () => import("@/components/AppNavigation.vue")
+);
 </script>
