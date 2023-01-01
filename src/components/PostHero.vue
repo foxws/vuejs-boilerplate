@@ -2,8 +2,8 @@
   <div class="navbar bg-white/10 text-white shadow">
     <form @submit.prevent="submit" class="w-full">
       <div class="px-4 flex flex-1">
-        <button for="search-input" type="submit">
-          <span class="mdi mdi-magnify text-2xl mr-3"></span>
+        <button for="search-input" class="mr-3" type="submit">
+          <span class="mdi mdi-magnify text-2xl"></span>
         </button>
 
         <input
@@ -15,7 +15,7 @@
       </div>
 
       <div class="px-4 flex">
-        <button class="btn btn-ghost p-0">
+        <button class="p-0">
           <span class="mdi mdi-filter-variant text-2xl"></span>
         </button>
       </div>
