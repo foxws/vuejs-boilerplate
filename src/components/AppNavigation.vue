@@ -38,7 +38,7 @@
               class="tooltip tooltip-bottom"
               active-class="!text-white"
             >
-              <span class="text-2xl mdi mdi-magnify"></span>
+              <span class="text-2xl mdi mdi-bell-outline"></span>
             </router-link>
           </li>
 
@@ -49,7 +49,7 @@
               class="tooltip tooltip-bottom"
               active-class="!text-white"
             >
-              <span class="text-2xl mdi mdi-account-circle"></span>
+              <span class="text-2xl mdi mdi-account-outline"></span>
             </router-link>
           </li>
         </ul>

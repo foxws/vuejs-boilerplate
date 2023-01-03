@@ -15,9 +15,9 @@
       </div>
 
       <div class="px-4 flex">
-        <button class="p-0">
+        <label for="filter-drawer" class="p-0">
           <span class="mdi mdi-filter-variant text-2xl"></span>
-        </button>
+        </label>
       </div>
     </form>
   </div>

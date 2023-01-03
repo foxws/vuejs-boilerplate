@@ -1,6 +1,4 @@
 <template>
-  <app-navigation />
-
   <router-view />
 </template>
 

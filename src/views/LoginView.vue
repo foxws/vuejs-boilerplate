@@ -1,61 +1,59 @@
 <template>
-  <div class="h-screen flex justify-center items-center">
-    <div class="card m-5 w-96 rounded-sm bg-white">
-      <div class="card-body">
-        <h2 class="card-title">Login</h2>
+  <div class="card m-5 w-96 rounded-sm bg-white">
+    <div class="card-body">
+      <h2 class="card-title">Login</h2>
 
-        <div v-if="state.message" class="alert alert-error my-3 text-base-100">
-          <div>
-            <span>Please check your credentials.</span>
-          </div>
+      <div v-if="state.message" class="alert alert-error my-3 text-base-100">
+        <div>
+          <span>Please check your credentials.</span>
+        </div>
+      </div>
+
+      <form @submit.prevent="login">
+        <div class="form-control mb-3 w-full">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+
+          <input
+            v-model.trim="form.email"
+            type="email"
+            placeholder="Email"
+            class="input input-bordered input-md w-full"
+            required
+          />
+
+          <label v-if="error('email')" class="label">
+            <span class="label-text-alt">
+              {{ error("email")?.find(Boolean) }}
+            </span>
+          </label>
         </div>
 
-        <form @submit.prevent="login">
-          <div class="form-control mb-3 w-full">
-            <label class="label">
-              <span class="label-text">Email</span>
-            </label>
+        <div class="form-control mb-3 w-full">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
 
-            <input
-              v-model.trim="form.email"
-              type="email"
-              placeholder="Email"
-              class="input input-bordered input-md w-full"
-              required
-            />
+          <input
+            v-model.trim="form.password"
+            type="password"
+            placeholder="Password"
+            class="input input-bordered input-md w-full"
+            required
+          />
 
-            <label v-if="error('email')" class="label">
-              <span class="label-text-alt">
-                {{ error("email")?.find(Boolean) }}
-              </span>
-            </label>
-          </div>
+          <label v-if="error('password')" class="label">
+            <span class="label-text-alt">
+              {{ error("password")?.find(Boolean) }}
+            </span>
+          </label>
+        </div>
 
-          <div class="form-control mb-3 w-full">
-            <label class="label">
-              <span class="label-text">Password</span>
-            </label>
-
-            <input
-              v-model.trim="form.password"
-              type="password"
-              placeholder="Password"
-              class="input input-bordered input-md w-full"
-              required
-            />
-
-            <label v-if="error('password')" class="label">
-              <span class="label-text-alt">
-                {{ error("password")?.find(Boolean) }}
-              </span>
-            </label>
-          </div>
-
-          <div class="card-actions pt-3 justify-end">
-            <button class="btn btn-md">Login</button>
-          </div>
-        </form>
-      </div>
+        <div class="card-actions pt-3 justify-end">
+          <button class="btn btn-md">Login</button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
