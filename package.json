@@ -20,6 +20,10 @@
     "@vueuse/core": "^9.9.0",
     "@vueuse/math": "^9.9.0",
     "daisyui": "^2.46.0",
+    "dayjs": "^1.11.7",
+    "laravel-echo": "^1.14.2",
+    "numbro": "^2.3.6",
+    "pusher-js": "^8.0.0",
     "qs": "^6.11.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
