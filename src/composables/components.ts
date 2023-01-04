@@ -17,8 +17,22 @@ export function useComponents() {
     errorComponent: ErrorComponent,
   });
 
+  const PostItem = defineAsyncComponent({
+    loader: () => import("@/components/PostItem.vue"),
+    loadingComponent: LoadingComponent,
+    errorComponent: ErrorComponent,
+  });
+
+  const PostOverview = defineAsyncComponent({
+    loader: () => import("@/components/PostOverview.vue"),
+    loadingComponent: LoadingComponent,
+    errorComponent: ErrorComponent,
+  });
+
   return {
     AppNavigation,
     PostHero,
+    PostItem,
+    PostOverview,
   };
 }

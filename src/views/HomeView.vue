@@ -4,6 +4,7 @@
     <div class="drawer-content">
       <app-navigation />
       <post-hero />
+      <post-overview />
     </div>
 
     <div class="drawer-side">
@@ -20,5 +21,5 @@
 <script setup lang="ts">
 import { useComponents } from "@/composables";
 
-const { AppNavigation, PostHero } = useComponents();
+const { AppNavigation, PostHero, PostOverview } = useComponents();
 </script>
