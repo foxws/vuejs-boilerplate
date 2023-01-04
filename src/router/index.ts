@@ -18,6 +18,16 @@ const router = createRouter({
       },
     },
     {
+      path: "/post/:id/:slug?",
+      name: "post",
+      component: () => import("../views/PostView.vue"),
+      props: true,
+      meta: {
+        layout: AppLayout,
+        middleware: "auth",
+      },
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("../views/AboutView.vue"),

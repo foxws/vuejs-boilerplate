@@ -6,7 +6,8 @@ import type {
 } from "@/interfaces";
 
 export interface PostModel extends Model {
-  //
+  content?: string;
+  summary?: string;
 }
 
 export interface PostResponse {
