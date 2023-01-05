@@ -22,8 +22,7 @@ export interface PostsResponse extends ModelsResponse {
 }
 
 export interface PostsFilters extends ModelsFilters {
-  id?: string | undefined;
-  type?: string | undefined;
+  list?: string | undefined;
   query?: string | undefined;
 }
 

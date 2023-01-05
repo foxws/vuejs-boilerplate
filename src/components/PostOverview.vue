@@ -23,6 +23,6 @@ onMounted(() => {
   useTitle("Home | MiniTube");
 
   // Fetch items
-  initialize({ filter: { type: "feed" } });
+  initialize({ filter: { list: "feed" } });
 });
 </script>
