@@ -7,6 +7,7 @@
         </button>
 
         <input
+          v-model.trim="query"
           id="search-input"
           type="text"
           placeholder="Search"
@@ -24,20 +25,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import type { PostsFilters } from "@/interfaces";
+import { computed } from "vue";
+import { usePosts } from "@/composables";
 
-const form = ref<PostsFilters>({
-  query: undefined,
-  sort: undefined,
+const { state, set } = usePosts();
+
+const query = computed({
+  get: () => state.filter?.query,
+  set: (query) => set({ filter: { query } }),
 });
-
-const items = [
-  { label: "Most Recent", value: "created_at:desc" },
-  { label: "Most Viewed", value: "views:desc" },
-  { label: "Longest", value: "size:desc" },
-  { label: "Shortest", value: "size:asc" },
-];
 
 const submit = async () => {};
 </script>
