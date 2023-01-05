@@ -19,7 +19,11 @@ export function usePosts() {
 
     set(payload, reset);
 
-    const uri = stringify(state.filter).toString();
+    const uri = stringify({
+      filter: state.filter,
+      sort: state.sort,
+    }).toString();
+
     const { data } = await api(`posts?${uri}`).get().json<PostsResponse>();
 
     return fill(data.value);
