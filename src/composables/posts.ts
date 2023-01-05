@@ -7,12 +7,7 @@ import type {
   PostsState,
 } from "@/interfaces";
 
-const initialState = <PostsState>{
-  data: undefined,
-  meta: undefined,
-  filter: undefined,
-  sort: undefined,
-};
+const initialState = <PostsState>{};
 
 const state = reactive({ ...initialState });
 
