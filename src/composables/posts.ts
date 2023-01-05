@@ -1,8 +1,8 @@
 import { reactive, readonly } from "vue";
 import { useApi } from "@/composables";
 import type {
-  PostsFilters,
   PostModel,
+  PostQuery,
   PostsResponse,
   PostsState,
 } from "@/interfaces";
@@ -10,7 +10,8 @@ import type {
 const initialState = <PostsState>{
   data: undefined,
   meta: undefined,
-  filters: undefined,
+  filter: undefined,
+  sort: undefined,
 };
 
 const state = reactive({ ...initialState });
@@ -18,21 +19,22 @@ const state = reactive({ ...initialState });
 export function usePosts() {
   const { api, stringify } = useApi();
 
-  const initialize = async (payload?: PostsFilters, reset?: boolean) => {
+  const initialize = async (payload?: PostQuery, reset?: boolean) => {
     if (!reset && typeof state.meta?.first_page_url === "string") return;
 
     set(payload, reset);
 
-    const uri = stringify(state.filters).toString();
+    const uri = stringify(state.filter).toString();
     const { data } = await api(`posts?${uri}`).get().json<PostsResponse>();
 
     return fill(data.value);
   };
 
-  const set = (payload?: PostsFilters, reset?: boolean) => {
+  const set = (payload?: PostQuery, reset?: boolean) => {
     if (reset) Object.assign(state, initialState);
 
-    state.filters = { ...state.filters, ...payload };
+    state.filter = { ...state.filter, ...payload?.filter };
+    state.sort = payload?.sort;
   };
 
   const get = async () => {

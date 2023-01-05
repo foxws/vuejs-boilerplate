@@ -23,9 +23,13 @@ export interface PostsResponse extends ModelsResponse {
 
 export interface PostsFilters extends ModelsFilters {
   id?: string | undefined;
-  sort?: string | undefined;
   type?: string | undefined;
   query?: string | undefined;
+}
+
+export interface PostQuery {
+  filter?: PostsFilters | undefined;
+  sort?: string | undefined;
 }
 
 export interface PostState {
@@ -37,6 +41,6 @@ export interface PostState {
 export interface PostsState {
   data: PostModel[] | undefined;
   meta: PostsMeta | undefined;
-  filters: PostsFilters | undefined;
-  selected: PostModel[] | undefined;
+  filter: PostsFilters | undefined;
+  sort: string | string[] | undefined;
 }

@@ -20,9 +20,9 @@ useInfiniteScroll(window, () => get(), {
 
 onMounted(() => {
   // Update document
-  useTitle("Library | MiniTube");
+  useTitle("Home | MiniTube");
 
   // Fetch items
-  initialize({ type: "feed" });
+  initialize({ filter: { type: "feed" } });
 });
 </script>
