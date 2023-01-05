@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-white/10 text-white shadow">
+  <div class="navbar bg-white/10 text-white">
     <form @submit.prevent="submit" class="w-full">
       <div class="px-4 flex flex-1">
         <button for="search-input" class="mr-3" type="submit">
