@@ -28,12 +28,12 @@
 import { computed } from "vue";
 import { usePosts } from "@/composables";
 
-const { state, set } = usePosts();
+const { state, initialize, set } = usePosts();
 
 const query = computed({
   get: () => state.filter?.query,
   set: (query) => set({ filter: { query } }),
 });
 
-const submit = async () => {};
+const submit = async () => initialize(undefined, true);
 </script>
